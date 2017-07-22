@@ -17,7 +17,8 @@ namespace Proxy.Consumer.ConsoleApp.Example
 
         public string Consume(int number)
         {
-           return Client.GetData(number);
+            return CallWebServiceMethod<string, int>( x => Client.GetData(x), number);
         }
+
     }
 }
